@@ -1,5 +1,3 @@
-import enums.TipoConta;
-
 public class Conta implements TransacoesBancarias {
     private TipoConta tipoConta;
     private double saldo;
