@@ -1,6 +1,3 @@
-import enums.TipoConta;
-import model.Conta;
-
 import java.util.Scanner;
 
 public class Main {
@@ -82,28 +79,30 @@ public class Main {
         Conta conta = cliente.getConta();
 
         switch (opcao) {
-            case 1 -> { // Saque
+                 // Saque
+            case 1:  {
                 System.out.print("Digite o valor para saque: R$ ");
                 double valor = scanner.nextDouble();
                 conta.sacar(valor);
                 conta.registrarTransacao("Saque", valor, valor * 0.01, cliente.getNome(),
                         cliente.getTipoConta().toString(), atendente.getNome(), agencia.getNome());
             }
-            case 2 -> { // Depósito
+                // Depósito
+            case 2:  {
                 System.out.print("Digite o valor para depósito: R$ ");
                 double valor = scanner.nextDouble();
                 conta.depositar(valor);
                 conta.registrarTransacao("Depósito", valor, valor * 0.01, cliente.getNome(),
                         cliente.getTipoConta().toString(), atendente.getNome(), agencia.getNome());
             }
-            case 3 -> System.out.println("Saldo atual: R$ " + conta.getSaldo());
-            case 4 -> conta.getExtrato().imprimirExtrato();
-            case 5 -> {
+            case 3:  System.out.println("Saldo atual: R$ " + conta.getSaldo());
+            case 4:  conta.getExtrato().imprimirExtrato();
+            case 5:  {
                 System.out.println("Saindo do sistema...");
                 return false; // Sai do programa
             }
-            default -> System.out.println("Opção inválida! Tente novamente.");
+            default: System.out.println("Opção inválida! Tente novamente.");
         }
-        return true; // Continua no programa
+        return true;
     }
 }

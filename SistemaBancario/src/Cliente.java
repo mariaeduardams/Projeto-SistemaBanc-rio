@@ -1,6 +1,4 @@
-import enums.TipoConta;
-import model.Conta;
-
+oi
 public class Cliente {
     private String nome;
     private int idade;
