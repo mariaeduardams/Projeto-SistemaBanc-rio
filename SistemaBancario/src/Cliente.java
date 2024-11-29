@@ -1,6 +1,3 @@
-import enums.TipoConta;
-import model.Conta;
-
 public class Cliente {
     private String nome;
     private int idade;
