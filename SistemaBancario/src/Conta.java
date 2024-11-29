@@ -1,5 +1,4 @@
 import enums.TipoConta;
-import model.Extrato;
 
 public class Conta implements TransacoesBancarias {
     private TipoConta tipoConta;
